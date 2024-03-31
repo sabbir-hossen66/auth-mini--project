@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
 
   const [theme, setTheme] = useState('light')
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme)
-    const localTheme = localStorage.getItem('theme')
-    document.querySelector('html').setAttribute('data-theme', localTheme)
-  }, [theme])
+  console.log(theme);
+  // useEffect(() => {
+  //   localStorage.setItem('theme', theme)
+  //   const localTheme = localStorage.getItem('theme')
+  //   document.querySelector('html').setAttribute('data-theme', localTheme)
+  // }, [theme])
 
   const handleToggle = (e) => {
 
